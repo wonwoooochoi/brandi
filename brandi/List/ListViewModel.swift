@@ -14,8 +14,8 @@ final class ListViewModel {
 	var keyword = BehaviorRelay<String>(value: "")
 	
 	private(set) var documents = BehaviorRelay<[Document]>(value: [])
-	private(set) var error = BehaviorRelay<Error?>(value: nil)
-	
+	private(set) var errorMessage = BehaviorRelay<String>(value: "")
+
 	private var meta = BehaviorRelay<Meta?>(value: nil)
 	private let disposeBag = DisposeBag()
 	private var currentKeyword: String?
@@ -38,10 +38,9 @@ final class ListViewModel {
 				return self?.convertItemData(data).asObservable() ?? Observable.empty()
 			}
 			.subscribe { [weak self] items in
-				self?.documents.accept(items.documents)
-				self?.isEnd = items.meta?.isEnd ?? false
+				self?.acceptItems(items, reset: true)
 			} onError: { [weak self] error in
-				self?.error.accept(error)
+				self?.acceptErrorMessage(error: error)
 			}
 			.disposed(by: disposeBag)
 		
@@ -69,19 +68,51 @@ extension ListViewModel {
 				return self?.convertItemData(data).asObservable() ?? Observable.empty()
 			}
 			.subscribe { [weak self] items in
-				
-				guard let self = self else { return }
-				
-				var documents = self.documents.value
-				documents.append(contentsOf: items.documents)
-				
-				self.documents.accept(documents)
-				self.isEnd = items.meta?.isEnd ?? false
-				
+				self?.acceptItems(items)
 			} onError: { [weak self] error in
-				self?.error.accept(error)
+				self?.acceptErrorMessage(error: error)
 			}
 			.disposed(by: disposeBag)
+		
+	}
+	
+}
+
+
+// MARK: - Fetch
+
+extension ListViewModel {
+	
+	private func acceptItems(_ items: Items, reset: Bool = false) {
+		
+		var documents = [Document]()
+		
+		if !reset {
+			documents.append(contentsOf: self.documents.value)
+		}
+		
+		documents.append(contentsOf: items.documents)
+		
+		self.documents.accept(documents)
+		isEnd = items.meta?.isEnd ?? false
+		
+		if documents.count == 0 {
+			acceptErrorMessage(error: RequestError.empty)
+		}
+		
+	}
+	
+	
+	private func acceptErrorMessage(error: Error) {
+		
+		guard let requestError = error as? RequestError else { errorMessage.accept(error.localizedDescription); return }
+		
+		switch requestError {
+			case .request: errorMessage.accept("요청이 실패하였습니다.")
+			case .parse: errorMessage.accept("처리에 실패하였습니다.")
+			case .empty: errorMessage.accept("검색 결과가 없습니다.")
+			default: errorMessage.accept("알 수 없는 오류.")
+		}
 		
 	}
 	

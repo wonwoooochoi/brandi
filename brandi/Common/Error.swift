@@ -11,4 +11,5 @@ enum RequestError: Error {
 	case unknown
 	case request
 	case parse
+	case empty
 }

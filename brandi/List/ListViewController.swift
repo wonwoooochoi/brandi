@@ -96,6 +96,13 @@ extension ListViewController {
 			}
 			.disposed(by: disposeBag)
 		
+		viewModel.errorMessage
+			.observeOn(MainScheduler.instance)
+			.subscribe { [weak self] errorMessage in
+				self?.showAlert(message: errorMessage)
+			}
+			.disposed(by: disposeBag)
+
 	}
 	
 }
@@ -111,6 +118,22 @@ extension ListViewController {
 		cell.document = document
 		
 		return cell
+		
+	}
+	
+}
+
+
+// MARK: - Alert
+
+extension ListViewController {
+	
+	private func showAlert(message: String) {
+		
+		let alert = UIAlertController.init(title: nil, message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
+		
+		present(alert, animated: true, completion: nil)
 		
 	}
 	
