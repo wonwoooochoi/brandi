@@ -24,3 +24,21 @@ extension UICollectionView {
 	}
 	
 }
+
+
+extension UIViewController {
+	
+	static func instantiate() -> Self {
+		
+		let name = String(describing: self)
+		let storyboard = UIStoryboard(name: name, bundle: nil)
+		
+		guard let viewController = storyboard.instantiateViewController(withIdentifier: name) as? Self else {
+			fatalError("instantiate fail: '\(self)'")
+		}
+		
+		return viewController
+		
+	}
+	
+}
