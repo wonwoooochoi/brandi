@@ -1,0 +1,6 @@
+framework module Pods_brandi {
+  umbrella header "Pods-brandi-umbrella.h"
+
+  export *
+  module * { export * }
+}
