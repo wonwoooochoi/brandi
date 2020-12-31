@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Item: Codable {
+struct Document: Codable {
 	
 	let collection: String
 	let datetime: String
@@ -43,9 +43,9 @@ struct Item: Codable {
 	
 }
 
-extension Item: Equatable {
+extension Document: Equatable {
 	
-	static func == (lhs: Item, rhs: Item) -> Bool {
+	static func == (lhs: Document, rhs: Document) -> Bool {
 		return lhs.imageUrl == rhs.imageUrl
 	}
 	
@@ -59,7 +59,7 @@ struct Meta: Codable {
 	let totalCount: Int
 	
 	enum CodingKeys: String, CodingKey {
-		case isEnd
+		case isEnd = "is_end"
 		case pageableCount = "pageable_count"
 		case totalCount = "total_count"
 	}
@@ -76,7 +76,7 @@ struct Meta: Codable {
 
 struct Items: Codable {
 	
-	let documents: [Item]
+	let documents: [Document]
 	let meta: Meta?
 	
 	enum CodingKeys: String, CodingKey {
@@ -86,7 +86,7 @@ struct Items: Codable {
 	
 	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
-		self.documents = (try? container.decode([Item].self, forKey: .documents)) ?? []
+		self.documents = (try? container.decode([Document].self, forKey: .documents)) ?? []
 		self.meta = try? container.decode(Meta.self, forKey: .meta)
 	}
 	
