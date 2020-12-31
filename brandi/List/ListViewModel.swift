@@ -76,6 +76,11 @@ extension ListViewModel {
 		
 	}
 	
+	
+	func document(at index: Int) -> Document {
+		return documents.value[index]
+	}
+	
 }
 
 

@@ -82,6 +82,7 @@ extension ListViewController {
 		collectionView.rx.itemSelected
 			.subscribe(onNext:{ [weak self] indexPath in
 				self?.view.endEditing (true)
+				self?.presentDetail(at: indexPath.item)
 			})
 			.disposed(by: disposeBag)
 		
@@ -124,7 +125,7 @@ extension ListViewController {
 }
 
 
-// MARK: - Alert
+// MARK: - Present
 
 extension ListViewController {
 	
@@ -134,6 +135,16 @@ extension ListViewController {
 		alert.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
 		
 		present(alert, animated: true, completion: nil)
+		
+	}
+	
+	
+	private func presentDetail(at index: Int) {
+		
+		let detail = DetailViewController.instantiate()
+		detail.document = viewModel.document(at: index)
+		
+		present(detail, animated: true, completion: nil)
 		
 	}
 	
