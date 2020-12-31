@@ -14,6 +14,8 @@
 		04AEF84A259D960900C3DA08 /* brandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF849259D960900C3DA08 /* brandiUITests.swift */; };
 		04AEF86B259D98AC00C3DA08 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF86A259D98AC00C3DA08 /* ListViewController.swift */; };
 		04AEF873259D98B800C3DA08 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AEF872259D98B800C3DA08 /* ListViewController.storyboard */; };
+		04AEF87F259D9AB500C3DA08 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF87E259D9AB500C3DA08 /* DetailViewController.swift */; };
+		04AEF887259D9ABD00C3DA08 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AEF886259D9ABD00C3DA08 /* DetailViewController.storyboard */; };
 		04AEF892259D9B7C00C3DA08 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF891259D9B7C00C3DA08 /* ListViewModel.swift */; };
 		04AEF898259D9C3300C3DA08 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF897259D9C3300C3DA08 /* Item.swift */; };
 		04AEF8A9259DAA5B00C3DA08 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8A8259DAA5B00C3DA08 /* Error.swift */; };
@@ -57,6 +59,8 @@
 		04AEF84B259D960900C3DA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04AEF86A259D98AC00C3DA08 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		04AEF872259D98B800C3DA08 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
+		04AEF87E259D9AB500C3DA08 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		04AEF886259D9ABD00C3DA08 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		04AEF891259D9B7C00C3DA08 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		04AEF897259D9C3300C3DA08 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		04AEF8A8259DAA5B00C3DA08 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			children = (
 				04AEF896259D9C2200C3DA08 /* Common */,
 				04AEF869259D989300C3DA08 /* List */,
+				04AEF87D259D9A9B00C3DA08 /* Detail */,
 				04AEF827259D960800C3DA08 /* AppDelegate.swift */,
 				04AEF830259D960900C3DA08 /* Assets.xcassets */,
 				04AEF832259D960900C3DA08 /* LaunchScreen.storyboard */,
@@ -165,6 +170,15 @@
 				04AEF891259D9B7C00C3DA08 /* ListViewModel.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		04AEF87D259D9A9B00C3DA08 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				04AEF87E259D9AB500C3DA08 /* DetailViewController.swift */,
+				04AEF886259D9ABD00C3DA08 /* DetailViewController.storyboard */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		04AEF896259D9C2200C3DA08 /* Common */ = {
@@ -318,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AEF887259D9ABD00C3DA08 /* DetailViewController.storyboard in Resources */,
 				04AEF834259D960900C3DA08 /* LaunchScreen.storyboard in Resources */,
 				04AEF831259D960900C3DA08 /* Assets.xcassets in Resources */,
 				04AEF873259D98B800C3DA08 /* ListViewController.storyboard in Resources */,
@@ -451,6 +466,7 @@
 			files = (
 				04AEF8BE259DC48000C3DA08 /* Extension.swift in Sources */,
 				04AEF898259D9C3300C3DA08 /* Item.swift in Sources */,
+				04AEF87F259D9AB500C3DA08 /* DetailViewController.swift in Sources */,
 				04AEF828259D960800C3DA08 /* AppDelegate.swift in Sources */,
 				04AEF8AE259DAA8000C3DA08 /* Config.swift in Sources */,
 				04AEF892259D9B7C00C3DA08 /* ListViewModel.swift in Sources */,
