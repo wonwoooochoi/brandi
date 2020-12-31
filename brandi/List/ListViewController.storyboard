@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aHF-aw-9tC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List View Controller-->
+        <scene sceneID="mUD-th-PRr">
+            <objects>
+                <viewController id="aHF-aw-9tC" customClass="ListViewController" customModule="brandi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I4y-ll-BPG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xzk-ky-PeI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HIg-hF-AuC">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nrd-NB-CKe">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MsO-KB-fQS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MsO-KB-fQS" firstAttribute="bottom" secondItem="HIg-hF-AuC" secondAttribute="bottom" id="7oB-iw-Mc3"/>
+                            <constraint firstItem="HIg-hF-AuC" firstAttribute="leading" secondItem="MsO-KB-fQS" secondAttribute="leading" id="GIU-Jr-281"/>
+                            <constraint firstItem="xzk-ky-PeI" firstAttribute="leading" secondItem="MsO-KB-fQS" secondAttribute="leading" id="Hxz-u5-30b"/>
+                            <constraint firstItem="HIg-hF-AuC" firstAttribute="top" secondItem="xzk-ky-PeI" secondAttribute="bottom" id="Lx6-Co-rtJ"/>
+                            <constraint firstItem="xzk-ky-PeI" firstAttribute="top" secondItem="MsO-KB-fQS" secondAttribute="top" id="X1d-5F-Zb8"/>
+                            <constraint firstItem="xzk-ky-PeI" firstAttribute="trailing" secondItem="MsO-KB-fQS" secondAttribute="trailing" id="qhY-f9-xY6"/>
+                            <constraint firstItem="MsO-KB-fQS" firstAttribute="trailing" secondItem="HIg-hF-AuC" secondAttribute="trailing" id="zAN-Qf-t46"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="HIg-hF-AuC" id="wI8-JT-NXf"/>
+                        <outlet property="searchBar" destination="xzk-ky-PeI" id="Qpl-2g-vX0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t2F-mD-aBy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="-46"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

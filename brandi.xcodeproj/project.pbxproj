@@ -12,10 +12,14 @@
 		04AEF834259D960900C3DA08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AEF832259D960900C3DA08 /* LaunchScreen.storyboard */; };
 		04AEF83F259D960900C3DA08 /* brandiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF83E259D960900C3DA08 /* brandiTests.swift */; };
 		04AEF84A259D960900C3DA08 /* brandiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF849259D960900C3DA08 /* brandiUITests.swift */; };
+		04AEF86B259D98AC00C3DA08 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF86A259D98AC00C3DA08 /* ListViewController.swift */; };
+		04AEF873259D98B800C3DA08 /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AEF872259D98B800C3DA08 /* ListViewController.storyboard */; };
 		04AEF892259D9B7C00C3DA08 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF891259D9B7C00C3DA08 /* ListViewModel.swift */; };
 		04AEF898259D9C3300C3DA08 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF897259D9C3300C3DA08 /* Item.swift */; };
 		04AEF8A9259DAA5B00C3DA08 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8A8259DAA5B00C3DA08 /* Error.swift */; };
 		04AEF8AE259DAA8000C3DA08 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8AD259DAA8000C3DA08 /* Config.swift */; };
+		04AEF8B5259DC27D00C3DA08 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8B3259DC27D00C3DA08 /* ListCell.swift */; };
+		04AEF8B6259DC27D00C3DA08 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AEF8B4259DC27D00C3DA08 /* ListCell.xib */; };
 		04AEF8BE259DC48000C3DA08 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8BD259DC48000C3DA08 /* Extension.swift */; };
 		4A1A68DFAE7A9B987D1709D1 /* Pods_brandi_brandiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3A3A440CA7C7D9CEDC5D160 /* Pods_brandi_brandiUITests.framework */; };
 		D5C9BF1F9EDE71F0837F8B90 /* Pods_brandi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA69C85DCE4F10691689F930 /* Pods_brandi.framework */; };
@@ -51,10 +55,14 @@
 		04AEF845259D960900C3DA08 /* brandiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = brandiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AEF849259D960900C3DA08 /* brandiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brandiUITests.swift; sourceTree = "<group>"; };
 		04AEF84B259D960900C3DA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AEF86A259D98AC00C3DA08 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		04AEF872259D98B800C3DA08 /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 		04AEF891259D9B7C00C3DA08 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		04AEF897259D9C3300C3DA08 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		04AEF8A8259DAA5B00C3DA08 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		04AEF8AD259DAA8000C3DA08 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		04AEF8B3259DC27D00C3DA08 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		04AEF8B4259DC27D00C3DA08 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 		04AEF8BD259DC48000C3DA08 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		29AB63A450040B21CD646FE3 /* Pods-brandiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brandiTests.debug.xcconfig"; path = "Target Support Files/Pods-brandiTests/Pods-brandiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3218AB74185779B6086FA0C6 /* Pods-brandi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brandi.release.xcconfig"; path = "Target Support Files/Pods-brandi/Pods-brandi.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +159,9 @@
 		04AEF869259D989300C3DA08 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				04AEF8B2259DC25E00C3DA08 /* Cell */,
+				04AEF86A259D98AC00C3DA08 /* ListViewController.swift */,
+				04AEF872259D98B800C3DA08 /* ListViewController.storyboard */,
 				04AEF891259D9B7C00C3DA08 /* ListViewModel.swift */,
 			);
 			path = List;
@@ -165,6 +176,15 @@
 				04AEF8BD259DC48000C3DA08 /* Extension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		04AEF8B2259DC25E00C3DA08 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04AEF8B3259DC27D00C3DA08 /* ListCell.swift */,
+				04AEF8B4259DC27D00C3DA08 /* ListCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		24D2B7E38009C71A3CA542E6 /* Frameworks */ = {
@@ -300,6 +320,8 @@
 			files = (
 				04AEF834259D960900C3DA08 /* LaunchScreen.storyboard in Resources */,
 				04AEF831259D960900C3DA08 /* Assets.xcassets in Resources */,
+				04AEF873259D98B800C3DA08 /* ListViewController.storyboard in Resources */,
+				04AEF8B6259DC27D00C3DA08 /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +454,9 @@
 				04AEF828259D960800C3DA08 /* AppDelegate.swift in Sources */,
 				04AEF8AE259DAA8000C3DA08 /* Config.swift in Sources */,
 				04AEF892259D9B7C00C3DA08 /* ListViewModel.swift in Sources */,
+				04AEF8B5259DC27D00C3DA08 /* ListCell.swift in Sources */,
 				04AEF8A9259DAA5B00C3DA08 /* Error.swift in Sources */,
+				04AEF86B259D98AC00C3DA08 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
